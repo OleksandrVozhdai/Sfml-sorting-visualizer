@@ -1,0 +1,4 @@
+﻿  Main.cpp
+C:\Users\Oleks\OneDrive\Рабочий стол\sfml-games\cpp-sorting-algorithm-visualizer-sfml\Main.cpp(21,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Oleks\OneDrive\Рабочий стол\sfml-games\cpp-sorting-algorithm-visualizer-sfml\Main.cpp(103,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  cpp-sorting-algorithm-visualizer-sfml.vcxproj -> C:\Users\Oleks\OneDrive\Рабочий стол\sfml-games\cpp-sorting-algorithm-visualizer-sfml\x64\Debug\cpp-sorting-algorithm-visualizer-sfml.exe
