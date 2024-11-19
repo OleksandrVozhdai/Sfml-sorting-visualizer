@@ -93,6 +93,44 @@ void gnomeSort()
     return;
 }
 
+void heapify(int n, int i) {
+    {
+    int largest = i;
+
+    int l = 2 * i + 1;
+
+    int r = 2 * i + 2;
+
+    if (l < n && recHs[l] > recHs[largest])
+        largest = l;
+
+    if (r < n && recHs[r] > recHs[largest])
+        largest = r;
+
+    if (largest != i) {
+        std::swap(recHs[i], recHs[largest]);
+        dispSort(recHs[i]);
+        heapify(n, largest);
+    }
+}
+
+void heapSort() {
+    int n = 80;
+
+    
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(n, i);
+
+    
+    for (int i = n - 1; i > 0; i--) {
+
+        
+        std::swap(recHs[0], recHs[i]);
+
+        heapify(i, 0);
+    }
+}
+
 
 int main() {
     srand(static_cast<unsigned>(time(0)));
@@ -116,7 +154,7 @@ int main() {
                 window->close();
             }
         }
-
+        
         if (!sorted) {
             if (choose == 1)
             {
@@ -134,6 +172,12 @@ int main() {
             {
                 dispSort(0);
                 gnomeSort();
+                sorted = true;
+            }
+            if (choose == 4)
+            {
+                dispSort(0);
+                heapSort();
                 sorted = true;
             }
         }
